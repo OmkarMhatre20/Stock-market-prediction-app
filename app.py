@@ -17,7 +17,7 @@ st.set_page_config(
 
 
 
-var=st.sidebar.radio('select a option',('info','Holt-Winters','LSTM','MULTIVARIATE',"FB PROPHET"))
+var=st.sidebar.radio('select a option',('info','LSTM','MULTIVARIATE',"FB PROPHET"))
 if var=='Info':
     st.title("Stock Market Prediction Model App")
 
@@ -68,7 +68,7 @@ if var=='Info':
 if var=="Holt-Winters":
     import pandas as pd
     import numpy as np
-    from statsmodels.tsa.api import ExponentialSmoothing
+    #from statsmodels.tsa.api import ExponentialSmoothing
     import yfinance as yf
 
     tic = st.text_input('Enter symbol of the stock')
