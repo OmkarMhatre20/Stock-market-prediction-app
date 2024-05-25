@@ -5,4 +5,4 @@ statsmodels
 yfinance
 prophet
 matplotlib
-sklearn
+scikit-learn
