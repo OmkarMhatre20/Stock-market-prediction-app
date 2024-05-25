@@ -61,7 +61,7 @@ if var=='Info':
     For any queries or suggestions, please reach out to us:
     - **Omkar**: [mat22ot.omkar@pg.ictmumbai.edu.in]
     - **Ankit**: [mat22ag.rai@pg.ictmumbai.edu.in]
-    - **Advay**: [mat22ak.parab@pg.ictmumbai.edu..in]
+    - **Advay**: [mat22ak.parab@pg.ictmumbai.edu.in]
     - **Rukaiya**: [mat22ra.shaikh@pg.ictmumbai.edu.in]
     """)
     
@@ -303,7 +303,8 @@ if var=="FB PROPHET":
 
     tic = st.text_input('Enter symbol of the stock')
     target_column = st.selectbox('select a variable',("High",'Close','Open','Low'))
-
+    output_lenght = st.number_input('Number of days to forecast',
+                                        min_value=20, max_value=300, value=120, step=10)
     submit = st.button('Submit')
 
     if submit==True:
@@ -319,10 +320,6 @@ if var=="FB PROPHET":
         # Choose the columns to predict
         data= data[["Date",target_column]]
         data.columns = ['ds','y']
-
-        output_lenght = st.number_input('Number of days to forecast',
-                                        min_value=20, max_value=300, value=120, step=10)
-
 
         model=Prophet()
         model.fit(df=data)
