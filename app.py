@@ -17,7 +17,7 @@ st.set_page_config(
 
 
 
-var=st.sidebar.radio('select a option',('info',"Holt-Winters",'LSTM','MULTIVARIATE',"FB PROPHET"))
+var=st.sidebar.radio('select a option',('Info',"Holt-Winters",'LSTM','MULTIVARIATE',"FB PROPHET"))
 if var=='Info':
     st.title("Stock Market Prediction Model App")
 
