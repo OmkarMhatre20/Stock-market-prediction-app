@@ -6,3 +6,4 @@ yfinance
 prophet
 matplotlib
 scikit-learn
+tensorflow
