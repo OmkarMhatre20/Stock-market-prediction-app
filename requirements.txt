@@ -7,3 +7,4 @@ prophet
 matplotlib
 scikit-learn
 tensorflow
+plotly
