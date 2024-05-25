@@ -28,7 +28,7 @@ if var=='Info':
 
     st.header("Team Members")
     st.write("""
-    - **Omkar** (Second Year Masters in Engineering Mathematics)
+    - **Omkar**
     - **Ankit**
     - **Advay**
     - **Rukaiya**
