@@ -23,7 +23,7 @@ if var=='Info':
 
     st.header("Project Overview")
     st.write("""
-    This repository contains the source code for a Stock Market Prediction Model application. This project was developed by a team of students from ICT Mumbai as part of our Masters in Engineering Mathematics program. The goal of this project is to create an application that can predict stock market trends using advanced mathematical and machine learning techniques.
+    This project was developed by a team of students from ICT Mumbai as part of our Masters in Engineering Mathematics program. The goal of this project is to create an application that can predict stock market trends using advanced mathematical and machine learning techniques.
     """)
 
     st.header("Team Members")
@@ -71,7 +71,7 @@ if var=="Holt-Winters":
     from statsmodels.tsa.api import ExponentialSmoothing
     import yfinance as yf
 
-    tic = st.text_input('Enter symbol of the stock')
+    tic = st.text_input('Enter symbol of the stock! you can find symbol of corresponding stock on https://finance.yahoo.com/')
     target_column = st.selectbox('select a variable',("High",'Close','Open','Low'))
     output_lenght = st.number_input('Number of days to forecast',
                                        min_value=1, max_value=15, value=1, step=1)
@@ -119,7 +119,7 @@ if var=='LSTM':
     from tensorflow.keras.models import Model
     import yfinance as yf
 
-    tic = st.text_input('Enter symbol of the stock')
+    tic = st.text_input('Enter symbol of the stock! you can find symbol of corresponding stock on https://finance.yahoo.com/')
     target_column = st.selectbox('select a variable',("High",'Close','Open','Low'))
     output_lenght = st.number_input('Number of days to forecast',
                                        min_value=1, max_value=15, value=1, step=1)
@@ -212,7 +212,7 @@ if var=='MULTIVARIATE':
     from tensorflow.keras.models import Model
     import yfinance as yf
 
-    tic = st.text_input('Enter symbol of the stock')
+    tic = st.text_input('Enter symbol of the stock! you can find symbol of corresponding stock on https://finance.yahoo.com/')
     sequence_length = st.number_input('Number of time steps used for forecasting',
                                             min_value=20, max_value=250, value=20, step=5)
 
@@ -301,7 +301,7 @@ if var=="FB PROPHET":
     import matplotlib.pyplot as plt
     import yfinance as yf
 
-    tic = st.text_input('Enter symbol of the stock')
+    tic = st.text_input('Enter symbol of the stock! you can find symbol of corresponding stock on https://finance.yahoo.com/')
     target_column = st.selectbox('select a variable',("High",'Close','Open','Low'))
     output_lenght = st.number_input('Number of days to forecast',
                                         min_value=20, max_value=300, value=120, step=10)
